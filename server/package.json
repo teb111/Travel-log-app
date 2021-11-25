@@ -9,7 +9,8 @@
     "build": "tsc",
     "client": "npm start --prefix ../client",
     "dev": "concurrently --kill-others-on-fail \"tsc -w\" \"nodemon dist/app.js\" \"npm run client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "data:import": "node dist/seeder"
   },
   "keywords": [
     "Travel",
@@ -18,6 +19,7 @@
   "author": "Oluwa Tobiloba",
   "license": "ISC",
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/express": "^4.17.13",
     "@types/morgan": "^1.9.3",
     "nodemon": "^2.0.14",
@@ -25,9 +27,13 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
+    "@types/color": "^3.0.2",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "concurrently": "^6.3.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mongoose": "^6.0.13",
     "morgan": "^1.10.0"
   }
 }

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { IoLocationOutline } from "react-icons/io5";
 import CarouselComp from "../components/CarouselComp";
 import { theme } from "../styles/theme";
+import { BsStarFill, BsStarHalf } from "react-icons/bs";
 
 const ReviewContainer = styled.div`
   background-color: ${theme.colors.offWhite};
@@ -15,12 +16,13 @@ const ReviewBody = styled.div``;
 export default function Country() {
   return (
     <React.Fragment>
-      <ReviewContainer>
+      <ReviewContainer className="p-2">
         <Author className="flex justify-start p-2">
           <img
             src="https://images.unsplash.com/photo-1552058544-f2b08422138a"
             width="100"
             height="50"
+            className="rounded"
           />
           <div className="flex flex-col">
             <p className="ml-4 text-xl tracking-wider">
@@ -34,7 +36,14 @@ export default function Country() {
               </span>
             </h5>
             <h5 className="flex mt-2 font-normal ml-4">
-              <span className="font-normal">Rating: 5 stars</span>
+              <span className="font-normal flex">
+                <span className="mr-1">Rating:</span>{" "}
+                <BsStarFill className="text-yellow-500" />
+                <BsStarFill className="text-yellow-500" />
+                <BsStarFill className="text-yellow-500" />
+                <BsStarFill className="text-yellow-500" />
+                <BsStarHalf className="text-yellow-500" />{" "}
+              </span>
             </h5>
             <h5 className="flex mt-2 font-normal ml-4">
               <span className="font-normal">

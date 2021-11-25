@@ -10,6 +10,7 @@ import Item from "./Item";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { IoChevronForward } from "react-icons/io5";
 import { theme } from "../styles/theme";
+import { Link } from "react-router-dom";
 const { colors } = theme;
 
 export default function Countries() {
@@ -20,7 +21,9 @@ export default function Countries() {
           Popular Countries
         </CountryHeader>
         <CountryExpand>
-          <CountryText>See all </CountryText>
+          <Link to="/countries" className="mt-1">
+            <CountryText>See all </CountryText>
+          </Link>
           <IoChevronForward color={colors.grey} />{" "}
         </CountryExpand>
       </CountryHeaderContainer>

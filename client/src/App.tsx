@@ -5,6 +5,7 @@ import "./assets/css/main.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
 import CountryScreen from "./screens/CountryScreen";
+import CountriesScreen from "./screens/CountriesScreen";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeScreen />}></Route>
           <Route path="country" element={<CountryScreen />}></Route>
+          <Route path="countries" element={<CountriesScreen />}></Route>
         </Routes>
       </Router>
     </ThemeProvider>

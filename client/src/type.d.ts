@@ -33,7 +33,7 @@ interface Theme {
 
 interface Item {
   name?: string;
-  image: string;
+  image?: string;
   width?: string;
   height?: string;
 }

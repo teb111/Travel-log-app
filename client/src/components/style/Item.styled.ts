@@ -16,10 +16,14 @@ export const CountryImage = styled.img`
   height: ${(props) => (props.height ? props.height : "300px")};
   margin-bottom: 10px;
   margin-top: 0;
+  transition: 0.5s ease-in-out;
 
   @media (max-width: 650px) {
     width: 90%;
     height: 140px;
+  }
+
+  &:hover {
   }
 `;
 

@@ -15,7 +15,7 @@ export default function CarouselComp() {
         useArrowKeys={false}
         leftArrow={<MdKeyboardArrowLeft style={{ cursor: "pointer" }} />}
         rightArrow={<MdKeyboardArrowRight style={{ cursor: "pointer" }} />}
-        className="arrowStyling"
+        className="gallery arrowStyling"
       >
         <Item
           image={"https://images.unsplash.com/photo-1541410965313-d53b3c16ef17"}

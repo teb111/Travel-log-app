@@ -34,7 +34,9 @@ export default function CountryScreen() {
         </ImageText>
       </ImageContainer>
       <div className="p-4">
-        <p>Check out what people has said about Barcelona,</p>
+        <p className="tracking-wider text-2xl">
+          Check out what people are saying about Barcelona,
+        </p>
       </div>
 
       <Country />
