@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
 import CountryScreen from "./screens/CountryScreen";
 import CountriesScreen from "./screens/CountriesScreen";
+import AddExperienceScreen from "./screens/AddExperienceScreen";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomeScreen />}></Route>
           <Route path="country" element={<CountryScreen />}></Route>
           <Route path="countries" element={<CountriesScreen />}></Route>
+          <Route path="add" element={<AddExperienceScreen />}></Route>
         </Routes>
       </Router>
     </ThemeProvider>

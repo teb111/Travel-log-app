@@ -12,7 +12,7 @@ import { IoChevronForward } from "react-icons/io5";
 import { theme } from "../styles/theme";
 const { colors } = theme;
 
-export default function Cities() {
+export default function Cities(): JSX.Element {
   return (
     <React.Fragment>
       <CountryHeaderContainer>

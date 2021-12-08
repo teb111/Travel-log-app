@@ -37,3 +37,29 @@ interface Item {
   width?: string;
   height?: string;
 }
+
+// ReduX Begins
+
+interface IReview {
+  name: string;
+  location?: string;
+  rating?: string;
+  costOfTravel?: string;
+  description?: string;
+  heritages?: [];
+  images?: [];
+}
+
+type ReviewState = {
+  loading?: boolean;
+  success?: boolean;
+  reviews?: IReview[];
+  error?: {};
+};
+
+type ReviewAction = {
+  type: string;
+  review: IReview[];
+};
+
+type DispatchType = (args: ReviewAction) => ReviewAction;

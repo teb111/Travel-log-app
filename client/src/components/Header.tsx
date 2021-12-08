@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   HeaderContainer,
   HeaderText,
@@ -14,7 +15,10 @@ export default function Header() {
   return (
     <React.Fragment>
       <HeaderContainer className="w-full h-full font-serif">
-        <HeaderText>Travel</HeaderText>
+        <Link to="/">
+          {" "}
+          <HeaderText>Travel</HeaderText>{" "}
+        </Link>
         <SearchContainer onSubmit={submitHandler}>
           <button
             className="flex-shrink-0 bg-teal-500 text-sm text-white py-1 px-2 rounded"

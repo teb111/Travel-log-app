@@ -7,6 +7,12 @@ export const mixins = {
     align-items: center;
   `,
 
+  flexStart: css`
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  `,
+
   spaceBetween: css`
     display: flex;
     justify-content: space-between;

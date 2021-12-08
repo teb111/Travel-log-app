@@ -31,7 +31,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 5px;
+  width: 2px;
   border-radius: 100px;
 }
 
