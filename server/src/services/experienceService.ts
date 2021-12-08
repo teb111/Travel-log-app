@@ -5,9 +5,9 @@ const ExperienceService = () => {
   const addExperience = (req: Request, res: Response) => {
     const { email } = req.body;
     console.log(email);
-    successResponse(res, email, 200);
+    // successResponse(res, email, 200);
 
-    // errorResponse(res, "Bad Request", 403);
+    errorResponse(res, 6, 403);
   };
 
   return {

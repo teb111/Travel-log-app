@@ -5,8 +5,8 @@ var ExperienceService = function () {
     var addExperience = function (req, res) {
         var email = req.body.email;
         console.log(email);
-        (0, response_1.successResponse)(res, email, 200);
-        // errorResponse(res, "Bad Request", 403);
+        // successResponse(res, email, 200);
+        (0, response_1.errorResponse)(res, 6, 403);
     };
     return {
         addExperience: addExperience,

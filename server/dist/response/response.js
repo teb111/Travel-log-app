@@ -8,7 +8,7 @@ var errorResponse = function (res, message, statusCode) {
         success: false,
         error: {
             statusCode: statusCode,
-            message: message,
+            message: message instanceof Error ? message.message : message,
         },
     });
 };
