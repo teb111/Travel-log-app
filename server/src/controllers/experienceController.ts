@@ -3,13 +3,25 @@ import asyncHandler from "express-async-handler";
 
 const ExperienceController = (serviceContainer: ReturnType<typeof Object>) => {
   const addUserExperience = asyncHandler(
-    async (req: Request, res: Response) => {
+    async (req: Request, res: Response, next: NextFunction) => {
       try {
-        console.log(req.body);
-        return req.body;
+        const experience = serviceContainer.experienceService.addExperience(
+          req,
+          res
+        );
+        return experience;
       } catch (error) {
-        console.log(error);
+        if (error instanceof Error) {
+          res.status(500).json({
+            success: false,
+            error: {
+              statusCode: 500,
+              message: error.message ?? "Internal Server Error",
+            },
+          });
+        }
       }
+      next();
     }
   );
 

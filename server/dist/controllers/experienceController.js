@@ -41,15 +41,26 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_async_handler_1 = __importDefault(require("express-async-handler"));
 var ExperienceController = function (serviceContainer) {
-    var addUserExperience = (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
+    var addUserExperience = (0, express_async_handler_1.default)(function (req, res, next) { return __awaiter(void 0, void 0, void 0, function () {
+        var experience;
+        var _a;
+        return __generator(this, function (_b) {
             try {
-                console.log(req.body);
-                return [2 /*return*/, req.body];
+                experience = serviceContainer.experienceService.addExperience(req, res);
+                return [2 /*return*/, experience];
             }
             catch (error) {
-                console.log(error);
+                if (error instanceof Error) {
+                    res.status(500).json({
+                        success: false,
+                        error: {
+                            statusCode: 500,
+                            message: (_a = error.message) !== null && _a !== void 0 ? _a : "Internal Server Error",
+                        },
+                    });
+                }
             }
+            next();
             return [2 /*return*/];
         });
     }); });
