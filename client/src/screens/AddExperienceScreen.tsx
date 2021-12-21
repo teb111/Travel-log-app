@@ -38,6 +38,11 @@ export default function AddExperienceScreen() {
       })
       .catch((err) => console.log(err));
   };
+
+  const submitHandler = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    const target = e.target as typeof e.target;
+  };
   return (
     <React.Fragment>
       <Header />
@@ -46,7 +51,7 @@ export default function AddExperienceScreen() {
           Add Your Experience &nbsp; <BsPlusSquareDotted />
         </h4>
       </div>
-      <Form>
+      <Form onSubmit={submitHandler}>
         <div className="group">
           <input
             type="text"
