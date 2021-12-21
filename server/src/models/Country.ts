@@ -7,7 +7,7 @@ const reviewSchema = new mongoose.Schema(
     body: { type: String, required: true, trim: false },
     costOfTravel: { type: String },
     location: { type: String },
-    heritages: { type: String, trim: false },
+    heritages: [{ type: String, trim: false }],
     imagePost: {
       images: [
         {

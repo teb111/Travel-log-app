@@ -7,7 +7,8 @@ const ExperienceController = (serviceContainer: ReturnType<typeof Object>) => {
       try {
         const experience = serviceContainer.experienceService.addExperience(
           req,
-          res
+          res,
+          next
         );
         return experience;
       } catch (error) {
